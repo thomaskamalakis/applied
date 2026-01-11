@@ -1,7 +1,7 @@
 import requests
 
 # Replace key value with the one obtained by the budibase UI as described in the docs 
-KEY = '945837439453845849ig7487486847669486849684986498682itorituriy48859485498594594854'
+KEY = '44ii4i4i4i4i4i4i4i4i4ii2iii1i4uu5yyy6y6y6ui5oo3p3p3iu5y5y5t'
 
 # Replace the IP address with your own and tableId with the id of the table you wish to download (see also the budibase documentation)
 TABLE_ID = 'ta_fdbe12ba3230476197ac08a38ee6df61'
