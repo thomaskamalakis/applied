@@ -10,7 +10,7 @@ import base64
 from dotenv import load_dotenv
 
 load_dotenv()
-SCOPES = os.getenv('SCOPES')
+SCOPES = [os.getenv('SCOPE')]
 # If modifying these scopes, delete the file token.json.
 
 TOKEN_FILE = os.getenv('TOKEN_FILE')
@@ -61,6 +61,6 @@ def send_message(service, message):
     }
     draft = service.users().drafts().create(userId = "me",
                                             body = create_message).execute()
-    service.users().drafts().send(body = {'id': draft['id']}, userId = 'me').execute()
+    msg = service.users().drafts().send(body = {'id': draft['id']}, userId = 'me').execute()
 
-    return draft
+    return msg 
