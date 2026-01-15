@@ -47,3 +47,47 @@ def read_table_data(server_ip = SERVER_IP,
 
     return data
 
+def write_table_data(row,
+                     server_ip = SERVER_IP,
+                     server_port = SERVER_PORT,
+                     api_key = KEY,
+                     table_id = TABLE_ID,
+                     app_id = APP_ID):
+    # URL endpoint
+    URL = f"http://{server_ip}:{server_port}/api/public/v1/tables/{table_id}/rows"
+
+    # Headers for the request
+    headers = {
+        "accept": "application/json",
+        "x-budibase-app-id": app_id,
+        "content-type": "application/json",
+        "x-budibase-api-key": api_key
+    }    
+
+    # Get data from the server
+    response = requests.post(URL, headers=headers, json=row)
+
+    return response
+
+def create_user(user_data,
+                server_ip = SERVER_IP,
+                server_port = SERVER_PORT,
+                api_key = KEY,
+                app_id = APP_ID):
+    
+    # URL endpoint
+    URL = f"http://{server_ip}:{server_port}/api/public/v1/users"
+
+    # Headers for the request
+    headers = {
+        "accept": "application/json",
+        "x-budibase-app-id": app_id,
+        "content-type": "application/json",
+        "x-budibase-api-key": api_key
+    }    
+
+    response = requests.post(URL, headers=headers, json=user_data)
+
+    return response
+
+
