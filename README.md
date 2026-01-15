@@ -2,12 +2,40 @@
 
 This repo contains some code discussed during the "Data Management I" course of the MSc programme Applied Informatics of the Department of Informatics and Telematics
 
+## Instructions
+
+Install Python virtual environment. In Ubuntu:
+```
+apt install python3-pip
+apt install python3-venv
+```
+Install git:
+```
+apt install git
+```
+Clone the repository:
+```
+git clone https://github.com/thomaskamalakis/applied
+```
+Create a virtual environment and activate it:
+```
+cd applied
+python3 -m venv venv
+source venv/bin/activate
+```
+Install requirements
+```
+pip install -r requirements.txt
+```
+
 ## Budibase API examples
 
 The repo contains the following files related to the Budibase API:
 - `budiapi.py` : a first encounter with the Budibase API.
 - `budilib.py` : the "proper" way of writing a small library module for handling requests using the Budibase API.
 - `read_budi_table.py` : example of how to use `budilib.py` to read data from a budibase table.
+- `write_budi_table.py` : write data to a budibase table
+- `create_user.py` : create a user in budibase
 
 You need to obtain your budibase API key as discussed in the classroom: on the bottom left corner click on your user email or icon and choose ``View API key''
 
