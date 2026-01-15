@@ -1,8 +1,16 @@
-# Code repository for Data Management I course 
+# Code repository for *Data Management I* 
 
-This repo contains some code discussed during the "Data Management I" course of the MSc programme Applied Informatics of the Department of Informatics and Telematics
+This repo contains some code discussed during the *Data Management I* course of the MSc programme Applied Informatics of the Department of Informatics and Telematics
+## Docker examples
 
-## Instructions
+In the `docker` folder you will find a docker-compose file that can be used to run budibase and a postgres container. Run with:
+```
+docker compose -f docker-compose-psql.yaml up
+```
+
+## Python examples
+
+### Instructions
 
 Install Python virtual environment. In Ubuntu:
 ```
@@ -28,7 +36,7 @@ Install requirements
 pip install -r requirements.txt
 ```
 
-## Budibase API examples
+### Budibase API examples
 
 The repo contains the following files related to the Budibase API:
 - `budiapi.py` : a first encounter with the Budibase API.
@@ -41,7 +49,7 @@ You need to obtain your budibase API key as discussed in the classroom: on the b
 
 <img width="686" height="349" alt="image" src="https://github.com/user-attachments/assets/22373ab8-2d57-4734-a96a-a9cce9a09776" />
 
-## Examples using the Gmail API
+### Examples using the Gmail API
 
 The repo contains the following files to test the Gmail API:
 - `gmaillib.py` : a Python module for sending an e-mail with Gmail API
